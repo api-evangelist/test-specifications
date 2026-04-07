@@ -1,12 +1,10 @@
 name: Test Specifications
-description: Documentation that defines the requirements, procedures, and expected
-  outcomes for testing software systems. Effective use of this practice reduces bugs
-  in production and supports a culture of quality-driven development.
+description: Documentation that defines the requirements, procedures, and expected outcomes for testing software systems. Effective use of this practice reduces bugs in production and supports a culture of quality-driven development.
 url: https://en.wikipedia.org/wiki/Test_specification
 tags:
-- Testing
-- Documentation
-- Quality Assurance
+  - Documentation
+  - Quality Assurance
+  - Testing
 created: '2025'
 modified: '2026-03-16'
 apis: []
