@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-specifications/main/json-schema/test-specifications-schema.json",
+  "title": "Test Specification",
+  "description": "Schema representing a structured test specification that defines requirements, procedures, and expected outcomes for validating API or software behavior.",
+  "type": "object",
+  "required": ["id", "name", "version", "scope"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test specification."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the test specification."
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the test specification (e.g., 1.0.0)."
+    },
+    "description": {
+      "type": "string",
+      "description": "Overview of what the test specification covers."
+    },
+    "scope": {
+      "type": "object",
+      "description": "The API or system this specification covers.",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the API or system under specification."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version of the API or system under specification."
+        },
+        "specificationUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of the canonical OpenAPI/AsyncAPI specification document."
+        }
+      }
+    },
+    "format": {
+      "type": "string",
+      "enum": ["openapi", "asyncapi", "json-schema", "gherkin", "pact", "hurl", "custom"],
+      "description": "Format or language the test specification is written in."
+    },
+    "testCases": {
+      "type": "array",
+      "description": "Individual test cases defined in this specification.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "given", "expected"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for this test case."
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable test case name."
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of what this test case validates."
+          },
+          "given": {
+            "type": "object",
+            "description": "Initial conditions (request, state, context).",
+            "properties": {
+              "method": { "type": "string" },
+              "path": { "type": "string" },
+              "headers": { "type": "object" },
+              "body": {}
+            }
+          },
+          "expected": {
+            "type": "object",
+            "description": "Expected outcomes (status code, response, schema).",
+            "properties": {
+              "statusCode": { "type": "integer" },
+              "headers": { "type": "object" },
+              "schema": { "type": "string" },
+              "body": {}
+            }
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"],
+            "description": "Priority level of the test case."
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "conformanceLevels": {
+      "type": "array",
+      "description": "Conformance levels defined by this specification (e.g., MUST, SHOULD, MAY).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": { "type": "string", "enum": ["MUST", "SHOULD", "MAY", "MUST NOT"] },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created": {
+      "type": "string",
+      "format": "date"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

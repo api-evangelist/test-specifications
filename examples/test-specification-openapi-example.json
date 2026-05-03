@@ -1,0 +1,84 @@
+{
+  "id": "spec-orders-api-v1",
+  "name": "Orders API Test Specification",
+  "version": "1.0.0",
+  "description": "Test specification for the Orders API v1, defining all required test cases for contract validation against the OpenAPI specification.",
+  "scope": {
+    "name": "Orders API",
+    "version": "v1",
+    "specificationUrl": "https://api.example.com/openapi.json"
+  },
+  "format": "openapi",
+  "testCases": [
+    {
+      "id": "tc-create-order-success",
+      "name": "Create Order - Success",
+      "description": "POST /orders with valid body returns 201 with order object.",
+      "given": {
+        "method": "POST",
+        "path": "/orders",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer {token}"
+        },
+        "body": {
+          "customerId": "cust-123",
+          "items": [{ "productId": "prod-456", "quantity": 2 }]
+        }
+      },
+      "expected": {
+        "statusCode": 201,
+        "headers": { "Content-Type": "application/json" },
+        "schema": "#/components/schemas/Order"
+      },
+      "priority": "critical",
+      "tags": ["Orders", "Create", "Happy Path"]
+    },
+    {
+      "id": "tc-create-order-invalid",
+      "name": "Create Order - Missing Required Fields",
+      "description": "POST /orders with missing customerId returns 400 Bad Request.",
+      "given": {
+        "method": "POST",
+        "path": "/orders",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "items": [{ "productId": "prod-456", "quantity": 1 }] }
+      },
+      "expected": {
+        "statusCode": 400,
+        "schema": "#/components/schemas/ErrorResponse"
+      },
+      "priority": "high",
+      "tags": ["Orders", "Validation", "Error Handling"]
+    },
+    {
+      "id": "tc-get-order-success",
+      "name": "Get Order - Success",
+      "description": "GET /orders/{id} for existing order returns 200 with order object.",
+      "given": {
+        "method": "GET",
+        "path": "/orders/{id}",
+        "headers": { "Authorization": "Bearer {token}" }
+      },
+      "expected": {
+        "statusCode": 200,
+        "schema": "#/components/schemas/Order"
+      },
+      "priority": "critical",
+      "tags": ["Orders", "Read", "Happy Path"]
+    }
+  ],
+  "conformanceLevels": [
+    {
+      "level": "MUST",
+      "description": "All critical priority test cases must pass before deployment."
+    },
+    {
+      "level": "SHOULD",
+      "description": "High priority test cases should pass for production readiness."
+    }
+  ],
+  "tags": ["Orders", "Contract Testing", "OpenAPI"],
+  "created": "2026-05-03",
+  "modified": "2026-05-03"
+}

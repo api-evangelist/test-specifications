@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ts": "https://raw.githubusercontent.com/api-evangelist/test-specifications/main/vocabulary/test-specifications-vocabulary.yml#",
+
+    "TestSpecification": {
+      "@id": "ts:TestSpecification",
+      "@type": "@id"
+    },
+    "TestCase": {
+      "@id": "ts:TestCase",
+      "@type": "@id"
+    },
+    "ConformanceLevel": {
+      "@id": "ts:ConformanceLevel",
+      "@type": "@id"
+    },
+
+    "id": "@id",
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "created": { "@id": "schema:dateCreated", "@type": "xsd:date" },
+    "modified": { "@id": "schema:dateModified", "@type": "xsd:date" },
+    "tags": "schema:keywords",
+
+    "scope": { "@id": "ts:scope", "@type": "@id" },
+    "format": "ts:specificationFormat",
+    "testCases": { "@id": "ts:testCases", "@container": "@set" },
+    "conformanceLevels": { "@id": "ts:conformanceLevels", "@container": "@set" },
+
+    "given": "ts:given",
+    "expected": "ts:expected",
+    "priority": "ts:priority",
+
+    "specificationUrl": "schema:url",
+    "statusCode": "ts:httpStatusCode",
+    "method": "ts:httpMethod",
+    "path": "ts:apiPath"
+  }
+}

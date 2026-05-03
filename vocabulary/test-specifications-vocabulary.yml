@@ -1,0 +1,135 @@
+name: Test Specifications Vocabulary
+description: >-
+  Vocabulary of terms, concepts, and classifications used in the domain of
+  API test specification authoring, conformance testing, and specification-driven
+  quality assurance.
+url: https://github.com/api-evangelist/test-specifications
+tags:
+  - Contract Testing
+  - Documentation
+  - Quality Assurance
+  - Testing
+created: '2026-05-03'
+modified: '2026-05-03'
+
+terms:
+  - term: Test Specification
+    definition: >-
+      A structured document that defines the requirements, preconditions, procedures,
+      inputs, expected outcomes, and acceptance criteria for validating an API or
+      software system. Test specifications transform informal requirements into
+      precise, executable criteria.
+    tags:
+      - Core Concept
+
+  - term: Test Case
+    definition: >-
+      A single unit within a test specification describing one scenario: a set of
+      conditions (given), an action (when), and an expected outcome (then). Test
+      cases are the atomic executable units derived from a test specification.
+    tags:
+      - Core Concept
+
+  - term: Acceptance Criteria
+    definition: >-
+      The conditions that an API implementation must satisfy to be accepted as
+      conformant with a test specification. Acceptance criteria are often expressed
+      in Given-When-Then format or as machine-readable JSON Schema constraints.
+    tags:
+      - Standards
+
+  - term: Contract
+    definition: >-
+      A formal agreement between an API producer and consumer that defines expected
+      request formats and response structures. Contracts are codified as OpenAPI,
+      AsyncAPI, Pact, or JSON Schema specifications and verified through contract tests.
+    tags:
+      - Contract Testing
+
+  - term: Conformance Level
+    definition: >-
+      A classification that indicates the strength of a test requirement. Common
+      conformance levels include MUST (mandatory), SHOULD (recommended), and MAY
+      (optional), following RFC 2119 terminology used in standards documents.
+    tags:
+      - Standards
+
+  - term: Test Plan
+    definition: >-
+      A high-level document describing the overall test strategy, scope, schedule,
+      resources, and risk assessment for a set of test specifications. Test plans
+      govern which specifications are executed, by whom, and under what conditions.
+    tags:
+      - Planning
+
+  - term: OpenAPI Specification
+    definition: >-
+      A machine-readable description of a REST API's endpoints, parameters, request
+      bodies, response codes, and schemas. OpenAPI documents serve as the authoritative
+      test specification for tools that auto-generate and validate API test cases.
+    tags:
+      - Standards
+
+  - term: AsyncAPI Specification
+    definition: >-
+      A specification standard for event-driven APIs. AsyncAPI documents describe
+      channels, message schemas, and protocol bindings for asynchronous interfaces,
+      providing the test specification baseline for event-driven contract testing.
+    tags:
+      - Standards
+
+  - term: Consumer-Driven Contract
+    definition: >-
+      A test specification methodology in which API consumers define and own the
+      contract documents (pacts) that describe what they expect from provider APIs.
+      Providers verify their implementations against all consumer-authored specifications.
+    tags:
+      - Contract Testing
+
+  - term: Gherkin
+    definition: >-
+      A plain-text specification language using Given-When-Then syntax for describing
+      test scenarios. Gherkin feature files are executable test specifications consumed
+      by BDD frameworks such as Cucumber and Karate.
+    tags:
+      - BDD
+
+  - term: Schema Validation
+    definition: >-
+      The process of verifying that a JSON payload conforms to a JSON Schema or
+      OpenAPI component schema. Schema validation is a common assertion type in
+      specification-driven test cases, ensuring responses match documented data models.
+    tags:
+      - Validation
+
+  - term: Regression Specification
+    definition: >-
+      A test specification capturing previously identified defects and their expected
+      correct outcomes. Regression specifications ensure that resolved issues do not
+      recur across API versions or deployments.
+    tags:
+      - Testing
+
+  - term: Test Harness
+    definition: >-
+      The tooling and infrastructure that loads, executes, and reports on test
+      specifications. Test harnesses interpret specification documents and orchestrate
+      their execution against target API environments.
+    tags:
+      - Tooling
+
+  - term: Specification Drift
+    definition: >-
+      The divergence between a formal API specification document and the actual
+      runtime behavior of the API implementation. Specification drift is detected
+      by continuously validating live API traffic against the specification.
+    tags:
+      - Quality Assurance
+
+  - term: Pact
+    definition: >-
+      A JSON document generated by consumer-side test specifications that encodes the
+      interactions a consumer expects from a provider. Pacts are published to a Pact
+      Broker and used by providers to verify specification compliance.
+    tags:
+      - Contract Testing
