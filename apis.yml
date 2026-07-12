@@ -172,6 +172,8 @@ apis:
         url: https://github.com/stoplightio/spectral
 
 common:
+  - type: DomainSecurity
+    url: security/test-specifications-domain-security.yml
   - type: GitHubOrg
     url: https://github.com/api-evangelist/test-specifications
   - type: JSONSchema
