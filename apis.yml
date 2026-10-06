@@ -47,7 +47,7 @@ tags:
   - Quality Assurance
   - Testing
 created: '2025'
-modified: '2026-05-03'
+modified: '2026-10-06'
 apis:
   - name: OpenAPI Initiative
     description: >-
@@ -203,6 +203,10 @@ apis:
         url: https://github.com/stoplightio/spectral
 
 common:
+  - url: https://www.openapis.org/blog
+    type: Blog
+  - url: https://www.openapis.org/feed
+    type: BlogRSS
   - type: DomainSecurity
     url: security/test-specifications-domain-security.yml
   - type: GitHubOrg
