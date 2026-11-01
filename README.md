@@ -1,4 +1,4 @@
-# Test Specifications
+# test-specifications
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,48 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Documentation that defines the requirements, procedures, and expected outcomes for testing software systems and APIs. Test specifications establish the criteria that implementations must satisfy, bridging the gap between product requirements and executable test cases. They include test plans, test case definitions, acceptance criteria, and conformance requirements. Effective use of this practice reduces bugs in production, supports contract testing, and enables a culture of quality-driven development aligned with OpenAPI, AsyncAPI, and JSON Schema standards.
+## test-specifications on APIs.io
 
-**URL:** [https://en.wikipedia.org/wiki/Test_specification](https://en.wikipedia.org/wiki/Test_specification)
+Everything profiled for test-specifications is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/test-specifications/](https://apis.io/providers/test-specifications/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+## API Evangelist rating
 
-- Acceptance Testing
-- Contract Testing
-- Documentation
-- OpenAPI
-- Quality Assurance
-- Testing
+Not yet rated. See [apis.io/providers/test-specifications/](https://apis.io/providers/test-specifications/).
 
-## Timestamps
+## How this profile is made
 
-- **Created:** 2025
-- **Modified:** 2026-05-03
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## APIs
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for test-specifications: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-| Name | Description |
-|---|---|
-| [OpenAPI Initiative](https://www.openapis.org/) | The de-facto standard for describing RESTful APIs; OpenAPI documents serve as machine-readable test specifications. |
-| [AsyncAPI Initiative](https://www.asyncapi.com/) | Open specification standard for event-driven APIs used as test specification baseline for async contract testing. |
-| [JSON Schema](https://json-schema.org/) | Vocabulary for annotating and validating JSON documents, used as payload specification in test cases. |
-| [Gherkin / Cucumber BDD](https://cucumber.io/docs/gherkin/) | Plain-text Given-When-Then language for writing executable test specifications consumed by BDD frameworks. |
-| [Pact Contract Testing](https://pact.io/) | Consumer-driven contract testing tool where consumers author pact specifications that providers verify against. |
-| [Swagger Editor](https://editor.swagger.io/) | Web-based editor for designing OpenAPI specifications with real-time validation and mock server generation. |
-| [Optic API](https://www.useoptic.com/) | Developer tool that tracks specification changes and validates live traffic against OpenAPI specs to detect contract drift. |
-| [Spectral](https://stoplight.io/open-source/spectral) | JSON/YAML linter and specification validator enforcing OpenAPI and AsyncAPI ruleset compliance in CI/CD pipelines. |
+## Open an issue
 
-## Artifacts
-
-| Type | URL |
-|---|---|
-| JSON Schema | [test-specifications-schema.json](json-schema/test-specifications-schema.json) |
-| JSON Structure | [test-specifications-structure.json](json-structure/test-specifications-structure.json) |
-| JSON-LD Context | [test-specifications-context.jsonld](json-ld/test-specifications-context.jsonld) |
-| Vocabulary | [test-specifications-vocabulary.yml](vocabulary/test-specifications-vocabulary.yml) |
-
-## Examples
-
-| Name | Description |
-|---|---|
-| [OpenAPI Test Specification Example](examples/test-specification-openapi-example.json) | Example test specification for an Orders API with contract test cases and conformance levels. |
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/test-specifications/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
